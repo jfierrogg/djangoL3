@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Proyecto Django L3{% endblock %}
+
+{% block main_content %}
+<div class="p-5 mb-4 bg-light rounded-3 shadow-sm border mt-4">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold text-primary">Bienvenido a mi Aplicación</h1>
+        <p class="fs-4 text-secondary">
+            Este proyecto aplica el patrón de diseño <strong>MTV</strong> y el principio <strong>DRY</strong>.
+        </p>
+        <hr class="my-4">
+   
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{% url 'contacto' %}" class="btn btn-primary btn-lg px-4 gap-3">Ir al Formulario</a>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="feature col text-center">
+        <h3 class="fs-2 text-dark">Backend</h3>
+        <p>Lógica procesada en Python 3.13 con validaciones robustas.</p>
+    </div>
+    <div class="feature col text-center border-start border-end">
+        <h3 class="fs-2 text-dark">Templates</h3>
+        <p>Uso de herencia de plantillas para evitar la duplicación de código.</p>
+    </div>
+    <div class="feature col text-center">
+        <h3 class="fs-2 text-dark">Database</h3>
+        <p>Los datos se guardan de forma segura en db.sqlite3.</p>
+    </div>
+</div>
+{% endblock %}
